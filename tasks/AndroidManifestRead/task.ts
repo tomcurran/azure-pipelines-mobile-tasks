@@ -17,8 +17,8 @@ async function run() {
         if (xml.hasProperty("android:versionCode"))
         {
             let versionCode = xml.getProperty("android:versionCode");
-            tl.setVariable("androidManfiestVersionCode", versionCode);
-            console.log("Version code: " + versionCode + " -> Saved to androidManfiestVersionCode environment variable.");
+            tl.setVariable("androidManifestVersionCode", versionCode);
+            console.log("Version code: " + versionCode + " -> Saved to androidManifestVersionCode environment variable.");
         }
         else
         {
@@ -28,8 +28,8 @@ async function run() {
         if (xml.hasProperty("android:versionName"))
         {
             let versionName = xml.getProperty("android:versionName");
-            tl.setVariable("androidManfiestVersionName", versionName);
-            console.log("Version name: " + versionName + " -> Saved to androidManfiestVersionName environment variable.");
+            tl.setVariable("androidManifestVersionName", versionName);
+            console.log("Version name: " + versionName + " -> Saved to androidManifestVersionName environment variable.");
         }
         else
         {
@@ -39,8 +39,8 @@ async function run() {
         if (xml.hasProperty("package"))
         {
             let packageName = xml.getProperty("package");
-            tl.setVariable("androidManfiestPackage", packageName);
-            console.log("Package: " + packageName + " -> Saved to androidManfiestPackage environment variable.");
+            tl.setVariable("androidManifestPackage", packageName);
+            console.log("Package: " + packageName + " -> Saved to androidManifestPackage environment variable.");
         }
         else
         {
@@ -54,8 +54,8 @@ async function run() {
             if (usesSdk.hasProperty("android:minSdkVersion"))
             {
                 let minSdkVersion = usesSdk.getProperty("android:minSdkVersion");
-                tl.setVariable("androidManfiestMinSdkVersion", minSdkVersion);
-                console.log("Minimum SDK version: " + minSdkVersion + " -> Saved to androidManfiestMinSdkVersion environment variable.");
+                tl.setVariable("androidManifestMinSdkVersion", minSdkVersion);
+                console.log("Minimum SDK version: " + minSdkVersion + " -> Saved to androidManifestMinSdkVersion environment variable.");
             }
             else
             {
@@ -65,8 +65,8 @@ async function run() {
             if (usesSdk.hasProperty("android:targetSdkVersion"))
             {
                 let targetSdkVersion = usesSdk.getProperty("android:targetSdkVersion");
-                tl.setVariable("androidManfiestTargetSdkVersion", targetSdkVersion);
-                console.log("Target SDK version: " + targetSdkVersion + " -> Saved to androidManfiestTargetSdkVersion environment variable.");
+                tl.setVariable("androidManifestTargetSdkVersion", targetSdkVersion);
+                console.log("Target SDK version: " + targetSdkVersion + " -> Saved to androidManifestTargetSdkVersion environment variable.");
             }
             else
             {
