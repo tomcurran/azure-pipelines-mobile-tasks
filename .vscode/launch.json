@@ -13,7 +13,7 @@
                 "${workspaceFolder}/**/*.js"
             ],
             "env": {
-                "INPUT_SOURCEPATH": "${workspaceFolder}/tasks/AndroidManifestRead/Tests/AndroidManifest.xml"
+                "INPUT_SOURCEPATH": "${workspaceFolder}/tasks/AndroidManifestRead/Tests/AndroidManifest-01.xml"
             }
         }
     ]
