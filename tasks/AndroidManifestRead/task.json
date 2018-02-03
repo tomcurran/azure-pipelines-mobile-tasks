@@ -25,7 +25,7 @@
     ],
     "inputs": [
         {
-            "name": "samplepathinput",
+            "name": "sourcePath",
             "type": "filePath",
             "label": "Android Manifest File Path",
             "defaultValue": "",
