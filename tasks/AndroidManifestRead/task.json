@@ -1,0 +1,42 @@
+{
+    "id": "546c6ae5-c869-4ba6-abfe-57cb4baa4669",
+    "name": "android-manifest-read",
+    "friendlyName": "Android Manifest Read",
+    "description": "Read common value from the Android manifest file",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Thomas Curran",
+    "visibility": [
+        "Build",
+        "Release"
+    ],
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Read manifest values in $(sourcePath)",
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
+    ],
+    "inputs": [
+        {
+            "name": "samplepathinput",
+            "type": "filePath",
+            "label": "Android Manifest File Path",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Full path to android manifest file."
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "built/task.js",
+            "workingDirectory": "$(currentDirectory)"
+        }
+    }
+}
