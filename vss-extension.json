@@ -54,7 +54,7 @@
     },
     "branding": {
         "color": "rgb(72,13,128)",
-        "theme": "light"
+        "theme": "dark"
     },
     "icons": {
         "default": "images/extension-icon.png"        
