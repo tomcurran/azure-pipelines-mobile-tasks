@@ -52,6 +52,10 @@
         "type": "git",
         "uri": "https://github.com/tomcurran/vsts-mobile-tasks"
     },
+    "branding": {
+        "color": "rgb(72,13,128)",
+        "theme": "light"
+    },
     "icons": {
         "default": "images/extension-icon.png"        
     },
