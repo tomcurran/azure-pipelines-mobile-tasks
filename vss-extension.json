@@ -4,7 +4,9 @@
     "name": "Mobile App Build Tasks",
     "version": "0.1.0",
     "publisher": "tomcurran",
-    "public" : true,
+    "galleryFlags": [
+        "Preview"
+    ],
     "repository": {
         "type": "git",
         "uri": "https://github.com/tomcurran/vsts-mobile-tasks"
