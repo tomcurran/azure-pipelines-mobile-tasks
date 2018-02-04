@@ -2,10 +2,10 @@
     "id": "546c6ae5-c869-4ba6-abfe-57cb4baa4669",
     "name": "android-manifest-read",
     "friendlyName": "Android Manifest Read",
-    "description": "Read common value from the Android manifest file",
+    "description": "Read common values from an Android manifest file.",
     "helpMarkDown": "",
     "category": "Utility",
-    "author": "Thomas Curran",
+    "author": "Tom Curran",
     "visibility": [
         "Build",
         "Release"
