@@ -1,0 +1,69 @@
+{
+    "manifestVersion": 1,
+    "id": "mobile-build-tasks",
+    "name": "Mobile App Build Tasks",
+    "version": "0.1.0",
+    "publisher": "tomcurran",
+    "public" : true,
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/tomcurran/vsts-mobile-tasks"
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "description": "Tasks for building mobile apps in VSTS.",
+    "categories": [
+        "Build and release"
+    ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "tags": [
+        "version", 
+        "versioning",
+        "build",
+        "replacement",
+        "android",
+        "ios",
+        "xamarin",
+        "package",
+        "manifest",
+        "info.plist"
+    ],
+    "links": {
+        "repository": {
+            "uri": "https://github.com/tomcurran/vsts-mobile-tasks"
+        },
+        "issues": {
+            "uri": "https://github.com/tomcurran/vsts-mobile-tasks/issues"
+        }
+    },
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "files": [
+        {
+            "path": "tasks/AndroidManifestRead"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "android-manifest-read",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/AndroidManifestRead"
+            }
+        }
+    ]
+}
