@@ -46,6 +46,10 @@
             "uri": "https://github.com/tomcurran/vsts-mobile-tasks/issues"
         }
     },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/tomcurran/vsts-mobile-tasks"
+    },
     "icons": {
         "default": "images/extension-icon.png"        
     },
