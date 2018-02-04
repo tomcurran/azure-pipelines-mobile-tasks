@@ -8,7 +8,7 @@ async function run() {
     try {
         let tool: trm.ToolRunner;
 
-        let sourcePath: string = tl.getPathInput("sourcePath", true, true);
+        let sourcePath: string = tl.getPathInput("SourcePath", true, true);
         console.log("Provided manifest path: " + sourcePath);
 
         let xmlString: string = fs.readFileSync(sourcePath, 'utf8');
@@ -17,8 +17,8 @@ async function run() {
         if (xml.hasProperty("android:versionCode"))
         {
             let versionCode = xml.getProperty("android:versionCode");
-            tl.setVariable("androidManifestVersionCode", versionCode);
-            console.log("Version code: " + versionCode + " -> Saved to androidManifestVersionCode environment variable.");
+            tl.setVariable("AndroidManifestVersionCode", versionCode);
+            console.log("Version code: " + versionCode + " -> Saved to AndroidManifestVersionCode environment variable.");
         }
         else
         {
@@ -28,8 +28,8 @@ async function run() {
         if (xml.hasProperty("android:versionName"))
         {
             let versionName = xml.getProperty("android:versionName");
-            tl.setVariable("androidManifestVersionName", versionName);
-            console.log("Version name: " + versionName + " -> Saved to androidManifestVersionName environment variable.");
+            tl.setVariable("AndroidManifestVersionName", versionName);
+            console.log("Version name: " + versionName + " -> Saved to AndroidManifestVersionName environment variable.");
         }
         else
         {
@@ -39,8 +39,8 @@ async function run() {
         if (xml.hasProperty("package"))
         {
             let packageName = xml.getProperty("package");
-            tl.setVariable("androidManifestPackage", packageName);
-            console.log("Package: " + packageName + " -> Saved to androidManifestPackage environment variable.");
+            tl.setVariable("AndroidManifestPackage", packageName);
+            console.log("Package: " + packageName + " -> Saved to AndroidManifestPackage environment variable.");
         }
         else
         {
@@ -54,8 +54,8 @@ async function run() {
             if (usesSdk.hasProperty("android:minSdkVersion"))
             {
                 let minSdkVersion = usesSdk.getProperty("android:minSdkVersion");
-                tl.setVariable("androidManifestMinSdkVersion", minSdkVersion);
-                console.log("Minimum SDK version: " + minSdkVersion + " -> Saved to androidManifestMinSdkVersion environment variable.");
+                tl.setVariable("AndroidManifestMinSdkVersion", minSdkVersion);
+                console.log("Minimum SDK version: " + minSdkVersion + " -> Saved to AndroidManifestMinSdkVersion environment variable.");
             }
             else
             {
@@ -65,8 +65,8 @@ async function run() {
             if (usesSdk.hasProperty("android:targetSdkVersion"))
             {
                 let targetSdkVersion = usesSdk.getProperty("android:targetSdkVersion");
-                tl.setVariable("androidManifestTargetSdkVersion", targetSdkVersion);
-                console.log("Target SDK version: " + targetSdkVersion + " -> Saved to androidManifestTargetSdkVersion environment variable.");
+                tl.setVariable("AndroidManifestTargetSdkVersion", targetSdkVersion);
+                console.log("Target SDK version: " + targetSdkVersion + " -> Saved to AndroidManifestTargetSdkVersion environment variable.");
             }
             else
             {
