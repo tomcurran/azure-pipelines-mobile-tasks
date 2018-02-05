@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "mobile-build-tasks",
     "name": "Mobile App Build Tasks",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "publisher": "tomcurran",
     "galleryFlags": [
         "Preview"
