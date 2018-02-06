@@ -1,5 +1,5 @@
 {
-  "name": "helloworld",
+  "name": "androidmanifestread",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,6 @@
   "dependencies": {
     "fs": "0.0.1-security",
     "samchon-framework": "^2.0.36",
-    "util": "^0.10.3",
     "vsts-task-lib": "^2.1.0"
   },
   "devDependencies": {
