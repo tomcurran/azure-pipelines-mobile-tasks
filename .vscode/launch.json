@@ -7,7 +7,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Launch Android Manifest Read",
             "program": "${workspaceFolder}/tasks/AndroidManifestRead/task.ts",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
@@ -15,6 +15,15 @@
             "env": {
                 "INPUT_SOURCEPATH": "${workspaceFolder}/tasks/AndroidManifestRead/Tests/AndroidManifest-01.xml"
             }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Git Last Commit Date",
+            "program": "${workspaceFolder}/tasks/GitLastCommitDate/task.ts",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
         }
     ]
 }

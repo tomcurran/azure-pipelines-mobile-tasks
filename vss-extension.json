@@ -58,6 +58,9 @@
     "files": [
         {
             "path": "tasks/AndroidManifestRead"
+        },
+        {
+            "path": "tasks/GitLastCommitDate"
         }
     ],
     "contributions": [
@@ -69,6 +72,16 @@
             ],
             "properties": {
                 "name": "tasks/AndroidManifestRead"
+            }
+        },
+        {
+            "id": "git-last-commit-date",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/GitLastCommitDate"
             }
         }
     ]

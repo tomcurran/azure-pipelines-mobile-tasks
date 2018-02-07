@@ -1,0 +1,32 @@
+{
+    "id": "6f2c4114-c828-43d7-b893-db7d5c1b19c8",
+    "name": "git-last-commit-date",
+    "friendlyName": "Git Last Commit Date",
+    "description": "Reads the date of the last git commit and exports to environemnt variables.",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Tom Curran",
+    "visibility": [
+        "Build",
+        "Release"
+    ],
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Read last git commmit date",
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "built/task.js",
+            "workingDirectory": "$(currentDirectory)"
+        }
+    }
+}

@@ -23,3 +23,14 @@ The following environment variables will be set with corresponding values from t
 * AndroidManifestPackage: manifest package value
 * AndroidManifestMinSdkVersion: manifest uses-sdk android:minSdkVersion value
 * AndroidManifestTargetSdkVersion: manifest uses-sdk android:targetSdkVersion value
+
+# General
+
+## Git Last Commit Date
+
+Reads the date of the last git commit, then export that data to environemnt variables.
+
+Outputs:
+
+* GitLastCommitDate: The date for the last git commit in ISO 8601 format.
+* GitLastCommitDateNumbers: The date for the last git commit in format YYMMDDHHmm. The date numbers are intended to fit in the 32-bit signed two's complement integer range.
