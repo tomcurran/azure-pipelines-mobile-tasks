@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Tom Curran",
+  "license": "MIT",
   "dependencies": {
     "fs": "0.0.1-security",
     "samchon-framework": "^2.0.36",
