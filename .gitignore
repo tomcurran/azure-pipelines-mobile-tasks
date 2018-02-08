@@ -305,3 +305,6 @@ __pycache__/
 
 # VSTS Task
 *.vsix
+
+# bitrise
+.bitrise*
