@@ -1,0 +1,56 @@
+---
+format_version: '4'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: other
+workflows:
+  primary:
+    steps:
+    - activate-ssh-key@3.1.1:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@4.0.7: {}
+    - npm@0.9.0:
+        inputs:
+        - command: install -g typescript@2.7.1
+        title: Install typescript
+    - npm@0.9.0:
+        inputs:
+        - workdir: "$TASK_DIR_ANDROID_MANIFEST_READ"
+        - command: install
+        title: 'Install Dependencies: AndroidManifestRead'
+    - npm@0.9.0:
+        inputs:
+        - workdir: "$TASK_DIR_GIT_LAST_COMMIT_DATE"
+        - command: install
+        title: 'Install Dependencies: GitLastCommitDate'
+    - script@1.1.5:
+        title: Build Tasks
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+            tsc -p "$TASK_DIR_ANDROID_MANIFEST_READ/tsconfig.json"
+            tsc -p "$TASK_DIR_GIT_LAST_COMMIT_DATE/tsconfig.json"
+    - npm@0.9.0:
+        inputs:
+        - command: install -g tfx-cli
+        title: Install TFS CLI
+    - script@1.1.5:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+            tfx extension create --manifest-globs vss-extension.json
+        title: Create Extension
+    - deploy-to-bitrise-io@1.3.10: {}
+app:
+  envs:
+  - TASK_DIR_ANDROID_MANIFEST_READ: "$BITRISE_SOURCE_DIR/tasks/AndroidManifestRead"
+  - TASK_DIR_GIT_LAST_COMMIT_DATE: "$BITRISE_SOURCE_DIR/tasks/GitLastCommitDate"
