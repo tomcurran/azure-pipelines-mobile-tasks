@@ -1,0 +1,42 @@
+{
+    "id": "6f2c4114-c828-43d7-b893-db7d5c1b19c8",
+    "name": "changelog-read",
+    "friendlyName": "Changelog Read",
+    "description": "Reads the latest version from a changelog following keepachangelog.com format.",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Tom Curran",
+    "visibility": [
+        "Build",
+        "Release"
+    ],
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Read changelog",
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
+    ],
+    "inputs": [
+        {
+            "name": "sourcePath",
+            "type": "filePath",
+            "label": "Changelog File Path",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Full path to changelog file."
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "built/task.js",
+            "workingDirectory": "$(currentDirectory)"
+        }
+    }
+}
