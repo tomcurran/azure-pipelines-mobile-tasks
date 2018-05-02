@@ -24,6 +24,18 @@
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Changelog Read",
+            "program": "${workspaceFolder}/tasks/ChangelogRead/task.ts",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "env": {
+                "INPUT_SOURCEPATH": "${workspaceFolder}/tasks/ChangelogRead/Tests/CHANGELOG-01.md"
+            }
         }
     ]
 }
