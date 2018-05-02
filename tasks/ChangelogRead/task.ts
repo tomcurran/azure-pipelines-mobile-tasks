@@ -14,7 +14,7 @@ async function run() {
         // pattern with named groups: /\[(?<version>(?<major>\d+)(\.(?<minor>\d+))?(\.(?<patch>\d+))?(\-(?<pre>[0-9A-Za-z\-\.]+))?(\+(?<build>[0-9A-Za-z\-\.]+))?)\]\s+\-\s+(?<date>.*)(?<notes>[^#]*)/;
         let pattern = /\[((\d+)(\.(\d+))?(\.(\d+))?(\-([0-9A-Za-z\-\.]+))?(\+([0-9A-Za-z\-\.]+))?)\]\s+\-\s+(.*)([^#]*)/;
         if (!pattern.test(changelog)) {
-            throw new Error("No match found for version string in changelog");
+            throw new Error("No change found in the changelog");
         }
         else
         {
