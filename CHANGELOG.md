@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.2.0] - 2018-05-03
 ### Added
 - Changelog Read task.
 
@@ -32,7 +34,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Extension with Android Manifest Read task.
 
-[Unreleased]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.1.5...develop
+[Unreleased]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.2.0...develop
+[0.2.0]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.1.5...v0.2.0
 [0.1.5]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.1.2...v0.1.3
