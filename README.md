@@ -34,3 +34,13 @@ Outputs:
 
 * GitLastCommitDate: The date for the last git commit in ISO 8601 format.
 * GitLastCommitDateNumbers: The date for the last git commit in format YYMMDDHHmm. The date numbers are intended to fit in the 32-bit signed two's complement integer range.
+
+## Changelog Read
+
+Reads the latest change information from a changelog following keepachangelog.com format, then export that data to environemnt variables.
+
+Outputs:
+
+* ChanglelogVersion: The version for the last change log entry e.g 1.2.3
+* ChanglelogChanges: The changes for the last change log entry.
+* ChanglelogDate: The date for the last change log entry e.g 2018-12-31
