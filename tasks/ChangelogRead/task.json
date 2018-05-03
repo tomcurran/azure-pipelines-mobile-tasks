@@ -12,7 +12,7 @@
     ],
     "version": {
         "Major": 0,
-        "Minor": 1,
+        "Minor": 2,
         "Patch": 0
     },
     "instanceNameFormat": "Read changelog",
@@ -31,6 +31,20 @@
             "defaultValue": "",
             "required": true,
             "helpMarkDown": "Full path to changelog file."
+        }
+    ],
+    "OutputVariables": [
+        {
+            "name" : "ChanglelogVersion",
+            "description" : "The version for the last change log entry"
+        },
+        {
+            "name" : "ChanglelogChanges",
+            "description" : "The changes for the last change log entry"
+        },
+        {
+            "name" : "ChanglelogDate",
+            "description" : "The date for the last change log entry"
         }
     ],
     "execution": {
