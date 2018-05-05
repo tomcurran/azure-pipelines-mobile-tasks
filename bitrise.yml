@@ -80,7 +80,7 @@ app:
   - TASK_DIR_CHANGELOG_READ: "$BITRISE_SOURCE_DIR/tasks/ChangelogRead"
   - MANIFEST_GLOBS: "$BITRISE_SOURCE_DIR/vss-extension.json"
 trigger_map:
-- push_branch: "*"
+- push_branch: master
   workflow: create
 - pull_request_source_branch: "*"
   workflow: create
