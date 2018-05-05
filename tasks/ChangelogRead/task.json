@@ -1,5 +1,5 @@
 {
-    "id": "6f2c4114-c828-43d7-b893-db7d5c1b19c8",
+    "id": "b70d4a99-6cbe-489a-9322-42e415884e58",
     "name": "changelog-read",
     "friendlyName": "Changelog Read",
     "description": "Reads the latest change information from a changelog following keepachangelog.com format.",
@@ -13,7 +13,7 @@
     "version": {
         "Major": 0,
         "Minor": 2,
-        "Patch": 0
+        "Patch": 1
     },
     "instanceNameFormat": "Read changelog",
     "groups": [
