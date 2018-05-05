@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.3.1] - 2018-05-03
+### Fixed
+- Changelog Read task ID not being unique.
+
 ## [0.3.0] - 2018-05-03
 ### Added
 - Added OutputVariables to all tasks.
@@ -38,7 +42,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Extension with Android Manifest Read task.
 
-[Unreleased]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.3.0...develop
+[Unreleased]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.3.1...develop
+[0.3.1]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.1.5...v0.2.0
 [0.1.5]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.1.4...v0.1.5
