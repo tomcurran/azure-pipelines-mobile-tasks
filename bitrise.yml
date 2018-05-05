@@ -69,6 +69,7 @@ workflows:
 
             tsc -p "$TASK_DIR_ANDROID_MANIFEST_READ/tsconfig.json"
             tsc -p "$TASK_DIR_GIT_LAST_COMMIT_DATE/tsconfig.json"
+            tsc -p "$TASK_DIR_CHANGELOG_READ/tsconfig.json"
     - npm@0.9.1:
         inputs:
         - command: install -g tfx-cli

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.3.2] - 2018-05-05
+### Fixed
+- Changelog Read task to build script.
+
 ## [0.3.1] - 2018-05-05
 ### Fixed
 - Changelog Read task ID not being unique.
@@ -42,7 +46,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Extension with Android Manifest Read task.
 
-[Unreleased]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.3.1...develop
+[Unreleased]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.3.2...develop
+[0.3.2]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/tomcurran/vsts-mobile-tasks/compare/v0.1.5...v0.2.0
