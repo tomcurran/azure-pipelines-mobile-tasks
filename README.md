@@ -4,8 +4,6 @@ These tasks assist with mobile app builds.
 
 # Android
 
-Multiple tasks for manipulating Android manifest XML file's.
-
 ## Manfiest Read
 
 Read common values from an Android manifest file at build time.
