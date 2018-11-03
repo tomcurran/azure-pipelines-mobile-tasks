@@ -9,7 +9,7 @@
     ],
     "repository": {
         "type": "git",
-        "uri": "https://github.com/tomcurran/vsts-mobile-tasks"
+        "uri": "https://github.com/tomcurran/azure-pipelines-mobile-tasks"
     },
     "targets": [
         {
@@ -42,10 +42,10 @@
     ],
     "links": {
         "repository": {
-            "uri": "https://github.com/tomcurran/vsts-mobile-tasks"
+            "uri": "https://github.com/tomcurran/azure-pipelines-mobile-tasks"
         },
         "issues": {
-            "uri": "https://github.com/tomcurran/vsts-mobile-tasks/issues"
+            "uri": "https://github.com/tomcurran/azure-pipelines-mobile-tasks/issues"
         }
     },
     "branding": {
