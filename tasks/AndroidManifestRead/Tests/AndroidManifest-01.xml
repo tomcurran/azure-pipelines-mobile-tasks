@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	android:versionCode="1"
 	android:versionName="1.0"
-	package="org.tomcurran.vsts.test">
+	package="org.tomcurran.azure.pipelines.test">
 
 	<uses-sdk
 		android:minSdkVersion="16"

@@ -29,7 +29,7 @@ workflows:
             # debug log
             set -x
 
-            tfx extension publish --manifest-globs "$MANIFEST_GLOBS" --auth-type pat --token "$VSTS_PERSONAL_ACCESS_TOKEN"
+            tfx extension publish --manifest-globs "$MANIFEST_GLOBS" --auth-type pat --token "$AZURE_DEVOPS_PERSONAL_ACCESS_TOKEN"
         title: Publish Extension
     before_run:
     - _shared

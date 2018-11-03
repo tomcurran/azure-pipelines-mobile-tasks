@@ -16,7 +16,7 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],
-    "description": "Tasks for building mobile apps in VSTS.",
+    "description": "Tasks for building mobile apps in Azure Pipelines.",
     "categories": [
         "Build and release"
     ],

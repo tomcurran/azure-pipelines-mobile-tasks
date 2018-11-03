@@ -9,7 +9,7 @@
   "author": "Tom Curran",
   "license": "MIT",
   "dependencies": {
-    "vsts-task-lib": "^2.1.0"
+    "azure-pipelines-task-lib": "^2.7.1"
   },
   "devDependencies": {
     "@types/node": "^8.5.9",

@@ -1,5 +1,5 @@
-import tl = require('vsts-task-lib/task');
-import trm = require('vsts-task-lib/toolrunner');
+import tl = require('azure-pipelines-task-lib/task');
+import trm = require('azure-pipelines-task-lib/toolrunner');
 import * as cp from "child_process";
 
 async function run() {

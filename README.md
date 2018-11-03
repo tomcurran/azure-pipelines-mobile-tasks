@@ -1,4 +1,4 @@
-## Mobile App Tasks for VSTS
+## Mobile App Tasks for Azure Pipelines
 
 These tasks assist with mobile app builds.
 
