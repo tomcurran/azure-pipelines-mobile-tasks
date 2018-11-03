@@ -1,0 +1,78 @@
+resources:
+- repo: self
+queue:
+  name: Hosted macOS
+  demands: npm
+
+#Your build pipeline references an undefined variable named ‘Extension.OutputPath’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
+steps:
+- task: Npm@1
+  displayName: 'npm install typescript'
+  inputs:
+    command: custom
+
+    verbose: false
+
+    customCommand: 'install -g typescript@2.7.1'
+
+
+- task: Npm@1
+  displayName: 'npm install AndroidManifestRead'
+  inputs:
+    workingDir: tasks/AndroidManifestRead
+
+    verbose: false
+
+
+- task: Npm@1
+  displayName: 'npm install GitLastCommitDate'
+  inputs:
+    workingDir: tasks/GitLastCommitDate
+
+    verbose: false
+
+
+- task: Npm@1
+  displayName: 'npm install ChangelogRead'
+  inputs:
+    workingDir: tasks/ChangelogRead
+
+    verbose: false
+
+
+- task: bool.compile-type-script.compile-type-script-task.compile-type-script@1
+  displayName: 'Compile TypeScript AndroidManifestRead'
+  inputs:
+    projectPath: tasks/AndroidManifestRead
+
+
+- task: bool.compile-type-script.compile-type-script-task.compile-type-script@1
+  displayName: 'Compile TypeScript GitLastCommitDate'
+  inputs:
+    projectPath: tasks/GitLastCommitDate
+
+
+- task: bool.compile-type-script.compile-type-script-task.compile-type-script@1
+  displayName: 'Compile TypeScript'
+  inputs:
+    projectPath: tasks/ChangelogRead
+
+
+- task: ms-devlabs.vsts-developer-tools-build-tasks.package-extension-build-task.PackageVSTSExtension@1
+  displayName: 'Package Extension'
+
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
+  inputs:
+    Contents: '$(Extension.OutputPath)'
+
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+    CleanTargetFolder: true
+
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+
+
