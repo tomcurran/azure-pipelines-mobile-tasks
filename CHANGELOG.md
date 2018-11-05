@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.3.4] - 2018-11-05
+### Fixed
+- Changelog Read task "ChanglelogChanges" not reading from changelog file correctly
+
 ## [0.3.3] - 2018-05-05
 ### Fixed
 - New version of Changelog Read task as it wasn't built properly previously.
@@ -50,7 +54,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Extension with Android Manifest Read task.
 
-[Unreleased]: https://github.com/tomcurran/azure-pipelines-mobile-tasks/compare/v0.3.3...develop
+[Unreleased]: https://github.com/tomcurran/azure-pipelines-mobile-tasks/compare/v0.3.4...develop
+[0.3.4]: https://github.com/tomcurran/azure-pipelines-mobile-tasks/compare/v0.3.3...v0.3.4
 [0.3.3]: https://github.com/tomcurran/azure-pipelines-mobile-tasks/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/tomcurran/azure-pipelines-mobile-tasks/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/tomcurran/azure-pipelines-mobile-tasks/compare/v0.3.0...v0.3.1
