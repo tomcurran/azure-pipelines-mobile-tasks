@@ -85,5 +85,3 @@ trigger_map:
   workflow: create
 - pull_request_source_branch: "*"
   workflow: create
-- tag: v*.*.*
-  workflow: publish
