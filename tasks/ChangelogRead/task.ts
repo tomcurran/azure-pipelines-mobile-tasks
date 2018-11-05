@@ -11,8 +11,7 @@ async function run() {
 
         let changelog: string = fs.readFileSync(sourcePath, 'utf8');
 
-        // pattern with named groups: /\[(?<version>(?<major>\d+)(\.(?<minor>\d+))?(\.(?<patch>\d+))?(\-(?<pre>[0-9A-Za-z\-\.]+))?(\+(?<build>[0-9A-Za-z\-\.]+))?)\]\s+\-\s+(?<date>.*)(?<notes>[^#]*)/;
-        let pattern = /\[((\d+)(\.(\d+))?(\.(\d+))?(\-([0-9A-Za-z\-\.]+))?(\+([0-9A-Za-z\-\.]+))?)\]\s+\-\s+(.*)([^#]*)/;
+        let pattern = /\[((\d+)(\.(\d+))?(\.(\d+))?(\-([0-9A-Za-z\-\.]+))?(\+([0-9A-Za-z\-\.]+))?)\]\s+\-\s+(.*)\s((\#\#\#|[A-Za-z0-9\-\.\s]|[^a-zA-Z0-9#])*);
         if (!pattern.test(changelog)) {
             throw new Error("No change found in the changelog");
         }
