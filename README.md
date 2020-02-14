@@ -4,7 +4,7 @@ These tasks assist with mobile app builds.
 
 # Android
 
-## Manfiest Read
+## Manifest Read
 
 Read common values from an Android manifest file at build time.
 
