@@ -1,7 +1,4 @@
-resources:
-- repo: self
-  clean: true
-queue:
+pool:
   name: Hosted macOS
 #Your build pipeline references an undefined variable named ‘AndroidManifest.AndroidManifestVersionCode’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
 #Your build pipeline references an undefined variable named ‘AndroidManifest.AndroidManifestVersionName’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
@@ -10,15 +7,16 @@ queue:
 #Your build pipeline references an undefined variable named ‘AndroidManifest.AndroidManifestTargetSdkVersion’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
 #Your build pipeline references an undefined variable named ‘GitLastCommitDate.GitLastCommitDate’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
 #Your build pipeline references an undefined variable named ‘GitLastCommitDate.GitLastCommitDateNumbers’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
+#Your build pipeline references an undefined variable named ‘GitLastCommitDate.GitLastCommitDateUnixTimestamp’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
 #Your build pipeline references an undefined variable named ‘Changelog.ChanglelogVersion’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
 #Your build pipeline references an undefined variable named ‘Changelog.ChanglelogDate’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
 #Your build pipeline references an undefined variable named ‘Changelog.ChanglelogChanges’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
+
 steps:
 - task: tomcurran.mobile-build-tasks.android-manifest-read.android-manifest-read@0
   displayName: 'Read manifest values in tasks/AndroidManifestRead/Tests/AndroidManifest-01.xml'
   inputs:
     sourcePath: 'tasks/AndroidManifestRead/Tests/AndroidManifest-01.xml'
-
 
 - bash: |
    #!/bin/bash
@@ -27,22 +25,20 @@ steps:
    echo "AndroidManifest.AndroidManifestPackage: $(AndroidManifest.AndroidManifestPackage)"
    echo "AndroidManifest.AndroidManifestMinSdkVersion: $(AndroidManifest.AndroidManifestMinSdkVersion)"
    echo "AndroidManifest.AndroidManifestTargetSdkVersion: $(AndroidManifest.AndroidManifestTargetSdkVersion)"
-    
+   
   failOnStderr: true
-
   displayName: 'Output manifest values'
 
 - task: tomcurran.mobile-build-tasks.git-last-commit-date.git-last-commit-date@0
   displayName: 'Read last git commmit date'
 
-
 - bash: |
    #!/bin/bash
    echo "GitLastCommitDate.GitLastCommitDate: $(GitLastCommitDate.GitLastCommitDate)"
    echo "GitLastCommitDate.GitLastCommitDateNumbers: $(GitLastCommitDate.GitLastCommitDateNumbers)"
-    
+   echo "GitLastCommitDate.GitLastCommitDateUnixTimestamp: $(GitLastCommitDate.GitLastCommitDateUnixTimestamp)"
+   
   failOnStderr: true
-
   displayName: 'Output git last commit date values'
 
 - task: tomcurran.mobile-build-tasks.changelog-read.changelog-read@0
@@ -50,14 +46,11 @@ steps:
   inputs:
     sourcePath: 'tasks/ChangelogRead/Tests/CHANGELOG-01.md'
 
-
 - bash: |
    #!/bin/bash
    echo "Changelog.ChanglelogVersion: $(Changelog.ChanglelogVersion)"
    echo "Changelog.ChanglelogDate: $(Changelog.ChanglelogDate)"
    echo "Changelog.ChanglelogChanges: $(Changelog.ChanglelogChanges)"
-    
+   
   failOnStderr: true
-
   displayName: 'Output changelog values'
-
