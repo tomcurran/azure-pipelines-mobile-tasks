@@ -32,6 +32,7 @@ Outputs:
 
 * GitLastCommitDate: The date for the last git commit in ISO 8601 format.
 * GitLastCommitDateNumbers: The date for the last git commit in format YYMMDDHHmm. The date numbers are intended to fit in the 32-bit signed two's complement integer range.
+* GitLastCommitDateUnixTimestamp: The date for the last git commit in UNIX timestamp format (the number of milliseconds since midnight, January 1, 1970 UTC).
 
 ## Changelog Read
 

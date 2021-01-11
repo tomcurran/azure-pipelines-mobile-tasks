@@ -12,7 +12,7 @@
     ],
     "version": {
         "Major": 0,
-        "Minor": 2,
+        "Minor": 3,
         "Patch": 0
     },
     "instanceNameFormat": "Read last git commmit date",
@@ -31,6 +31,10 @@
         {
             "name" : "GitLastCommitDateNumbers",
             "description" : "The date for the last git commit in format YYMMDDHHmm"
+        },
+        {
+            "name" : "GitLastCommitDateUnixTimestamp",
+            "description" : "The date for the last git commit in UNIX timestamp format"
         }
     ],
     "execution": {

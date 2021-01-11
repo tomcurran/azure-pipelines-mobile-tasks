@@ -28,6 +28,17 @@ async function run() {
 
         tl.setVariable("GitLastCommitDateNumbers", gitLastCommitDateNumbers);
         console.log("Git last commit date numbers: " + gitLastCommitDateNumbers + " -> Saved to GitLastCommitDateNumbers environment variable.");
+
+        var args = ["show", "-s", "--format=%ct"];
+        console.log("[command]" + git + " " + args.join(" "));
+        var gitLastCommitDateUnixTimestamp = (cp.execFileSync(git, args, {
+            encoding: "utf8",
+            cwd: gitDir
+        }) as string).trim();
+        console.log(gitLastCommitDateUnixTimestamp);
+
+        tl.setVariable("GitLastCommitDateUnixTimestamp", gitLastCommitDateUnixTimestamp);
+        console.log("Git last commit date UNIX timestamp: " + gitLastCommitDateUnixTimestamp + " -> Saved to GitLastCommitDateUnixTimestamp environment variable.");
     }
     catch (err) {
         tl.setResult(tl.TaskResult.Failed, err.message);

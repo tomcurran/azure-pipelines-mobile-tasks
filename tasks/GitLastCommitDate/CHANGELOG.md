@@ -6,6 +6,10 @@ and this task adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.htm
 
 ## Unreleased
 
+## 0.3.0 - 2021-01-11
+### Added
+- Added UNIX timestamp output.
+
 ## 0.2.0 - 2018-05-03
 ### Added
 - Added OutputVariables to task.json.
