@@ -11,7 +11,7 @@
   "dependencies": {
     "fs": "0.0.1-security",
     "samchon-framework": "^2.0.36",
-    "azure-pipelines-task-lib": "^2.7.1"
+    "azure-pipelines-task-lib": "^4.3.1"
   },
   "devDependencies": {
     "@types/node": "^8.5.9",
